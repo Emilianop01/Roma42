@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epiacent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/02 19:56:16 by epiacent          #+#    #+#             */
-/*   Updated: 2023/12/05 12:49:38 by epiacent         ###   ########.fr       */
+/*   Created: 2023/12/05 20:53:10 by epiacent          #+#    #+#             */
+/*   Updated: 2023/12/05 20:58:12 by epiacent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+void	ft_ultimate_div_mod(int *a, int *b)
 {
-	write(1, &c, 1);
+	int	ris;
+	int	res;
+
+	ris = *a / *b;
+	res = *a % *b;
+	*a = ris;
+	*b = res;
 }
