@@ -6,11 +6,11 @@
 /*   By: epiacent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 20:21:02 by epiacent          #+#    #+#             */
-/*   Updated: 2023/12/05 20:39:43 by epiacent         ###   ########.fr       */
+/*   Updated: 2023/12/06 17:13:58 by epiacent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_ultimate_ft(int *********nbr)
+void	ft_ultimate_ft(int *********nbr)
 {
 	*********nbr = 42;
 }

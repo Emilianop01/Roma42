@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epiacent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/05 20:41:37 by epiacent          #+#    #+#             */
-/*   Updated: 2023/12/06 17:14:54 by epiacent         ###   ########.fr       */
+/*   Created: 2023/12/06 15:27:28 by epiacent          #+#    #+#             */
+/*   Updated: 2023/12/06 16:21:20 by epiacent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_swap(int	*a, int	*b)
+void	ft_rev_int_tab(int *tab, int size)
 {
 	int	swap;
+	int	i;
 
-	swap = *a;
-	*a = *b;
-	*b = swap;
+	i = 0;
+	while (i < (size / 2))
+	{
+		swap = tab[i];
+		tab[i] = tab[size - 1 - i];
+		tab[size - 1 - i] = swap;
+		i++;
+	}
 }
