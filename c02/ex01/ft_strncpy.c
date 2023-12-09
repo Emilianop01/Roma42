@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: epiacent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 22:01:58 by epiacent          #+#    #+#             */
-/*   Updated: 2023/12/06 22:29:19 by epiacent         ###   ########.fr       */
+/*   Created: 2023/12/09 21:48:22 by epiacent          #+#    #+#             */
+/*   Updated: 2023/12/09 21:58:58 by epiacent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while (i != n)
+	while (i < n)
 	{
-		dest[i] = src[i];
+		if (src[i] != '\0')
+			dest[i] = src[i];
+		else
+			dest[i] = '\0';
 		i++;
 	}
 	return (dest);

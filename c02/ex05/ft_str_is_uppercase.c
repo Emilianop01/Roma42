@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epiacent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 21:22:03 by epiacent          #+#    #+#             */
-/*   Updated: 2023/12/09 21:36:54 by epiacent         ###   ########.fr       */
+/*   Created: 2023/12/09 22:38:26 by epiacent          #+#    #+#             */
+/*   Updated: 2023/12/09 22:43:14 by epiacent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_uppercase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if ('A' <= str[i] && str[i] <= 'Z')
+			i++;
+		else
+			return (0);
 	}
-	if (src[i] == '\0')
-	{
-		dest[i] = src[i];
-	}
-	return (dest);
+	return (1);
 }

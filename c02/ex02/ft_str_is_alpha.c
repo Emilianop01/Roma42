@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: epiacent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/06 22:31:13 by epiacent          #+#    #+#             */
-/*   Updated: 2023/12/06 22:46:47 by epiacent         ###   ########.fr       */
+/*   Created: 2023/12/09 22:00:56 by epiacent          #+#    #+#             */
+/*   Updated: 2023/12/09 22:10:01 by epiacent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_str_is_alpha(char *str)
 	{
 		if ('a' <= str[i] && str[i] <= 'z')
 			i++;
-		else if ('a' <= str[i] && str[i] <= 'Z')
+		else if ('A' <= str[i] && str[i] <= 'Z')
 			i++;
 		else
 			return (0);

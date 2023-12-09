@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epiacent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 21:22:03 by epiacent          #+#    #+#             */
-/*   Updated: 2023/12/09 21:36:54 by epiacent         ###   ########.fr       */
+/*   Created: 2023/12/09 23:10:46 by epiacent          #+#    #+#             */
+/*   Updated: 2023/12/09 23:12:57 by epiacent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if ('A' <= str[i] && str[i] <= 'Z')
+			str[i] += 32;
 		i++;
 	}
-	if (src[i] == '\0')
-	{
-		dest[i] = src[i];
-	}
-	return (dest);
+	return (str);
 }

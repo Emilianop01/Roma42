@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: epiacent <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 21:22:03 by epiacent          #+#    #+#             */
-/*   Updated: 2023/12/09 21:36:54 by epiacent         ###   ########.fr       */
+/*   Created: 2023/12/09 22:44:25 by epiacent          #+#    #+#             */
+/*   Updated: 2023/12/09 23:03:27 by epiacent         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strcpy(char *dest, char *src)
+int	ft_str_is_printable(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
-		i++;
+		if (32 <= str[i] && str[i] <= 126)
+			i++;
+		else
+			return (0);
 	}
-	if (src[i] == '\0')
-	{
-		dest[i] = src[i];
-	}
-	return (dest);
+	return (1);
 }
